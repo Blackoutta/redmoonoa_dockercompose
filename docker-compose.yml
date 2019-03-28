@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  webserver:
+    image: blackouta/redmoonoa_server
+    ports:
+      - '8888:8080' 
+  db:
+    image: blackouta/redmoonoa_db
+    volumes:
+      - redmoonoa-data:/var/lib/mysql
+
+volumes:
+  redmoonoa-data:
